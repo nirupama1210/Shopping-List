@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="app2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <style>
+        .container{
+            margin: 75px;
+            margin-left: 550px;
+        }
+    </style>
+    <div class="container">
+        <h1 id="login2">SIGN UP</h1>
+       
+        <input type="text" class="inputbox" name="user1" id="user1" placeholder="Username">
+        <label class="alert" id="user"></label>
+        <input type="text" class="inputbox" name="email1" id="email1" placeholder="Email">
+        <label class="alert" id="email"></label>
+        <input type="password" name="pass1" id="pass1"  class="inputbox" placeholder="Password">
+        <label class="alert" id="pass"></label>
+        <input type="password" name="cpass1" id="cpass1"  class="inputbox" placeholder="Confirm Password">
+        <label class="alert" id="cpass"></label>
+        <input type="button" value="Create Account" class="buttonbox" onclick="formValidate()">
+        <label class="alert" id="msg"></label>
+        <a href="index.html">Login</a>
+       
+
+
+    </div>
+</body>
+</html>

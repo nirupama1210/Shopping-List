@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="inner1" id="innerdiv">
+            <div class="bigicons">
+           <img src="plus.svg" alt="plus" class="largeimage" onclick="addCategory()">
+           <img src="trash.svg" alt="plus" class="largeimage" onclick="clearCategory()">
+        </div>
+        </div>
+        <div class="inner2">
+            <input type="text" class="inputbox" name="cat" id="cat" placeholder="Category">
+            <div class="buttondiv">
+            <input type="button" value="Add" class="buttonbox2" onclick="addNewCategory()">
+            <input type="button" value="Cancel" class="buttonbox2" onclick="cancelButton()"><br>
+        </div>
+            <label class="alert" id="msg1"></label>
+           
+        </div>
+        <div class="inner3">
+            <input type="text" class="inputbox" name="cat2" id="cat2" placeholder="Category">
+            <div class="buttondiv">
+            <input type="button" id="b1" value="Edit" class="buttonbox2">
+            <input type="button" value="Cancel" class="buttonbox2" onclick="cancelButton()"><br>
+        </div>
+            <label class="alert" id="msg2"></label>
+        
+        
+    </div>
+    <script src="categoryscript.js"></script>
+</body>
+</html>
