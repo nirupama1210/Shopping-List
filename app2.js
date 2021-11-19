@@ -133,7 +133,6 @@ async function formValidate()
     }
     if(f==0)
     {
-       // console.log(email1+" "+password1+" "+name1);
         try{
             axios.post(api,{email:email1.value.toLowerCase(),password:password1.value,username:name1.value.toLowerCase(),ques:ques.value,ans:ans.value.toLowerCase()})
             .then(res=>console.log(res))
@@ -141,7 +140,6 @@ async function formValidate()
             axios.post(api2,{email:email1.value,categoryname:"General",items:[]})
             .then(res=>console.log(res))
             .catch(err=>console.log(err));
-           // console.log(res.status)
            email1.value="";
            password1.value="";
            name1.value="";

@@ -57,8 +57,7 @@ async function formValidate()
     if (name.value=="" || pass.value == "")
     {
         alertmsg.innerText="*Please enter both Username and Password";
-
-        
+       
     }
     else{
             let st="";

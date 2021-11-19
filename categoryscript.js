@@ -229,12 +229,6 @@ async function deleteCategory(email,id){
             window.location.reload();
         })
         .catch(err=>console.log(err));
-
-        //document.querySelector(".inner2").style.display="none";
-       //catname="";
-       //await checkEmailUser(email);
-       
-        
     }
     catch(error)
     {

@@ -14,6 +14,7 @@ async function generatePassword(){
     email=document.getElementById("email1").value;
     ques=document.getElementById("pass2").value;
     ans=document.getElementById("ans1").value.toLowerCase();
+    
     let f=0;
     let x=0;
     if(ans==="")

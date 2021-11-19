@@ -408,8 +408,8 @@ function cancelButton()
     document.querySelector(".inner3").style.display="none";   
 }
 
-function printList(){
-    //console.log(document.querySelector(".inner1"))
+function printList()
+{
        if(document.querySelector(".emptylist").style.display==="none")
         {var originalContents = document.body.innerHTML;
 

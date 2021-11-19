@@ -99,11 +99,9 @@ justify-content: space-between;
     display: flex;
     justify-content: space-between;
     border: none;
-    width:300px;
-    
+    width:300px; 
     font-size: 17px;
-    background-color: white;
-    
+    background-color: white;    
 }
 .buttondiv{
 display: flex;
