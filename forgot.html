@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <style>
+        .container{
+            margin: 75px;
+            margin-left: 550px;
+        }
+        #password{
+            margin: 20px;
+            background-color: white;
+            display: none;
+            padding: 30px;
+            font-weight: bold;
+        }
+        #pass2{
+            height:40px;
+            width:240px
+        }
+    </style>
+    <div class="container">
+        <h1 id="login2">FORGOT PASSWORD</h1>
+        <input type="text" class="inputbox" name="email1" id="email1" placeholder="Email">
+        <select name="pass2" id="pass2" class="inputbox">
+        <option value="Your birth city">Your birth city</option>
+        <option value="Your mother's name">Your mother's name</option>
+        <option value="Your high school's name">Your high school's name</option>
+        <option value="Your favourite book">Your favourite book</option>
+        </select>
+        <input type="password" name="ans1" id="ans1" class="inputbox" placeholder="Answer">
+        <label class="alert" id="ans"></label>
+        <input type="button" value="Show Password" class="buttonbox" onclick="generatePassword()">
+        <label class="alert" id="msg"></label>
+        <p id="password"></p>
+        <a href="signin.html">Login</a>
+        <script src="forgot.js"></script>
+    </div>
+</body>
+</html>

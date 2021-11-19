@@ -27,7 +27,7 @@ async function checkEmailUser(user,email,pass)
     for(let i=0;i<response.data.length;i++)
     {
         
-        if((response.data[i].email===email ||response.data[i].username===user)&response.data[i].password===pass)
+        if((response.data[i].email===email.toLowerCase() ||response.data[i].username===user.toLowerCase())&response.data[i].password===pass)
         {
             val=response.data[i].email;
             f=f+1;
@@ -44,6 +44,7 @@ async function checkEmailUser(user,email,pass)
     }
 }
 
+
 async function formValidate()                                    
 { 
     var alertmsg= document.getElementById("msg");
@@ -52,7 +53,7 @@ async function formValidate()
     var validate= document.getElementById("remember");
     var name = document.getElementById("user1");               
     var pass= document.getElementById("pass1");    
-    
+
     if (name.value=="" || pass.value == "")
     {
         alertmsg.innerText="*Please enter both Username and Password";

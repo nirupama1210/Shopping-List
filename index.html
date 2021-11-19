@@ -8,24 +8,45 @@
     
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="start.css">
+   
 </head>
-<body>
-    <div class="container">
-        <h1 id="login1">SIGN IN</h1>
-       
-        <input type="text" class="inputbox" name="user1" id="user1" placeholder="Username">
-        
-        <input type="password" name="pass1" id="pass1"  class="inputbox" placeholder="Password">
-        
-        <input type="button" value="Login" class="buttonbox" onclick="formValidate()">
-        <div class="innercontainer">
-        <input type="checkbox" name="remember" id="remember">Remember Me
+<body onload="move()">
+    <div id="title">
+        <img src="ShoppingListLogo3.JPG" alt="Logo" id="home">
+        <p id="p00">SHOPPING LIST</p>
     </div>
-        <a href="login.html">Don't have an Account? Sign-Up</a>
-        <a href="forgot.html">Forgot Password</a>
-        <label class="alert" id="msg"></label>
 
+        <p id="p01">Take your grocery list wherever you go — no pen or paper required <img src="ques.svg" alt="Know More" id="more" onclick="showMore()"></p>
+        <div class="bar1">
+            <div id="myBar" class="bar2" style="height:20px;width:0"></div>
+          </div>
+        <p id="p02">We've rounded up the best list-managing, meal-planning, and money-saving grocery list shopping app to make future trips easier than ever</p>
+    <img src="downarrow.svg" alt="Login" onclick="login()" id="login">
     </div>
     <script src="app.js"></script>
+    <script>
+        function move() {
+          var elem = document.getElementById("myBar");   
+          var width = 1;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 95) {
+              clearInterval(id);
+              document.getElementById("login").style.display="block"
+
+            } else {
+              width++; 
+              elem.style.width = width + '%'; 
+            }
+          }
+        }
+        function login(){
+            window.location.replace("signin.html");
+        }
+        function showMore(){
+            document.getElementById("p02").style.display="block";
+        }
+        </script>
 </body>
 </html>

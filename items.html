@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <div class="page">
+        <div class="header">
+            <div class="innerheader">
+            <img src="ShoppingListLogo2.JPG" alt="Logo" class="logo">
+            <h1 id="h2"></h1>
+        </div>
+            <input type="button" value="Sign Out" id="signout" class="signout" onclick="signOut()">
+        </div>
+        <div class="container">
+            <div class="inner1" id="innerdiv">
+                <div class="bigicons">
+                    <div class="sideicons">
+                    <img src="back.svg" alt="back" class="largeimage" onclick="showCategory()">
+                    <img src="print.svg" alt="print" class="largeimage" onclick="printList()">
+                </div>
+                    <div class="sideicons">
+               <img src="plus.svg" alt="plus" class="largeimage" onclick="addItem()">
+               <img src="trash.svg" alt="plus" class="largeimage" onclick="clearItem()">
+                    </div>
+            </div>
+            <div class="emptylist">
+                <img src="list.svg" alt="list" id="list">
+                <h1 id="h1">Your list is empty</h1>
+                <p id="p1">Start adding things to make sure nothing's left behind</p>
+            </div>
+            </div>
+            
+            <div class="inner2">
+                <div class="inputdiv">
+                <input type="text" class="inputbox" name="item" id="item" placeholder="Item">
+                <input type="text" class="inputbox" name="quan" id="quan" placeholder="Quantity">
+            </div>
+                <div class="buttondiv">
+                <input type="button" value="Add" class="buttonbox2" onclick="addNewItem()">
+                <input type="button" value="Cancel" class="buttonbox2" onclick="cancelButton()"><br>
+            </div>
+                <label class="alert" id="msg1"></label>
+               
+            </div>
+            <div class="innernew">
+                <img src="back.svg" alt="back" class="smallimage" onclick="showAddItem()" style="background-color: #DCF7FF;">
+                <input type="text" class="inputbox" name="price" id="price" placeholder="Approx. Price">
+                <div class="buttondiv">
+                <input type="button" value="Add" class="buttonbox2" onclick="addNewItemPrice()">
+                <input type="button" value="Cancel" class="buttonbox2" onclick="cancelButton()"><br>
+                </div>
+            </div>
+            <div class="inner3">
+                <input type="text" class="inputbox" name="item2" id="item2" placeholder="Item">
+                <input type="text" class="inputbox" name="quan2" id="quan2" placeholder="Quantity">
+                <input type="text" class="inputbox" name="price" id="price2" placeholder="Approx. Price">
+                <div class="buttondiv">
+                <input type="button" id="b1" value="Save" class="buttonbox2">
+                <input type="button" value="Cancel" class="buttonbox2" onclick="cancelButton()"><br>
+            </div>
+                <label class="alert" id="msg2"></label>
+            
+            
+        </div>
+    </div>
+        <script src="items.js"></script>
+    </body>
+    </html>

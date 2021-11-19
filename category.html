@@ -9,11 +9,20 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    
+<div class="page">
+    
+    <div class="header">
+        <img src="ShoppingListLogo2.JPG" alt="Logo" class="logo">
+        <input type="button" value="Sign Out" class="signout" onclick="signOut()">
+    </div>
     <div class="container">
         <div class="inner1" id="innerdiv">
             <div class="bigicons">
+               
            <img src="plus.svg" alt="plus" class="largeimage" onclick="addCategory()">
            <img src="trash.svg" alt="plus" class="largeimage" onclick="clearCategory()">
+
         </div>
         </div>
         <div class="inner2">
@@ -35,6 +44,7 @@
         
         
     </div>
+</div>
     <script src="categoryscript.js"></script>
 </body>
 </html>

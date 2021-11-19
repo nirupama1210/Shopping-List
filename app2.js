@@ -9,19 +9,23 @@ async function formValidate()
     var alertemail= document.getElementById("email");
     var alertpassword= document.getElementById("pass");
     var alertcpassword= document.getElementById("cpass");
+    var alertquespass= document.getElementById("ans");
     var msg= document.getElementById("msg");
 
     var name1 = document.getElementById('user1')             
     var email1 = document.getElementById('email1');    
     var password1 = document.getElementById('pass1'); 
     var cpassword1 = document.getElementById('cpass1');
+    var ques=document.getElementById('pass2');
+    var ans=document.getElementById('ans1');
     let f=0;  
-    if (name1.value==""&&email1.value == ""&&password1.value == ""&&cpassword1.value == "")
+    if (name1.value==""&&email1.value == ""&&password1.value == ""&&cpassword1.value == ""&&ans.value)
     {
         alertname.innerText="*Kindly fill Username field";
         alertemail.innerText="*Kindly fill Email field";
         alertpassword.innerText="*Kindly fill this field";
         alertcpassword.innerText="*Kindly fill this field";
+        alertquespass.innerText="*Kindly answer the security question";
         f=f+1;
        // console.log(f);
     }
@@ -119,11 +123,19 @@ async function formValidate()
         //console.log(f);
         
     }
+    if(ans.value=="")
+    {
+        alertquespass.innerText="*Kindly answer the security question";
+        f=f+1;
+    }
+    else{
+        alertquespass.innerText="";
+    }
     if(f==0)
     {
        // console.log(email1+" "+password1+" "+name1);
         try{
-            axios.post(api,{email:email1.value,password:password1.value,username:name1.value})
+            axios.post(api,{email:email1.value.toLowerCase(),password:password1.value,username:name1.value.toLowerCase(),ques:ques.value,ans:ans.value.toLowerCase()})
             .then(res=>console.log(res))
             .catch(err=>console.log(err));
             axios.post(api2,{email:email1.value,categoryname:"General",items:[]})
@@ -134,7 +146,8 @@ async function formValidate()
            password1.value="";
            name1.value="";
            cpassword1.value="";
-            msg.innerHTML="Account Created"
+            msg.innerHTML="Account Created";
+            ans.value="";
         }
         catch(error)
         {

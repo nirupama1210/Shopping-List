@@ -14,7 +14,13 @@
         .container{
             margin: 75px;
             margin-left: 550px;
+            margin-top: 10px;
         }
+        #pass2{
+            height:40px;
+            width:240px
+        }
+
     </style>
     <div class="container">
         <h1 id="login2">SIGN UP</h1>
@@ -27,11 +33,17 @@
         <label class="alert" id="pass"></label>
         <input type="password" name="cpass1" id="cpass1"  class="inputbox" placeholder="Confirm Password">
         <label class="alert" id="cpass"></label>
+       <select name="pass2" id="pass2" class="inputbox">
+            <option value="Your birth city">Your birth city</option>
+            <option value="Your mother's name">Your mother's name</option>
+            <option value="Your high school's name">Your high school's name</option>
+            <option value="Your favourite book">Your favourite book</option>
+        </select>
+        <input type="password" name="ans1" id="ans1"  class="inputbox" placeholder="Answer">
+        <label class="alert" id="ans"></label>
         <input type="button" value="Create Account" class="buttonbox" onclick="formValidate()">
         <label class="alert" id="msg"></label>
-        <a href="index.html">Login</a>
-       
-
+        <a href="signin.html">Login</a>
 
     </div>
 </body>
