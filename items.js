@@ -320,6 +320,8 @@ async function deleteItem(email,id,idx)
 function editItem(email,id,item,price,quan,idx)
 {
     document.querySelector(".inner3").style.display="flex";
+    document.querySelector(".inner2").style.display="none";
+    document.querySelector(".innernew").style.display="none";
     document.getElementById("item2").value=item;
     document.getElementById("price2").value=price;
     document.getElementById("quan2").value=quan;
